@@ -100,7 +100,7 @@ const Contact = () => {
       </div>
       <div className="w-full  flex-col justify-start mt-24">
         <form onSubmit={handleSubmit}>
-          <div className="mb-8 flex flex-col md:w-1/2">
+          <div className="lg-8 flex flex-col lg:w-1/2">
             <label
               className={`${empty ? "font-serif text-red-500" : "font-serif"}`}
             >
@@ -138,7 +138,7 @@ const Contact = () => {
               type="text"
             />
           </div>
-          <div className="mb-8 flex flex-col md:w-1/2">
+          <div className="mb-8 flex flex-col lg:w-1/2">
             <label
               className={`${empty ? "font-serif text-red-500" : "font-serif"}`}
             >
