@@ -13,30 +13,30 @@ const Navbar = () => {
     if(scrolled>0){
       setShowborder(true);
     }
-    else{
+    else{   
       setShowborder(false)
     }
   }
   window.addEventListener('scroll',handleScroll)
   return (
-    <nav className={`mx-auto flex-wrap flex justify-evenly items-center text-white sticky top-0 z-50  py-4 ${showborder? 'border-b border-gray-300 bg-slate-950':'border-none bg-slate-910'}`}>
+    <nav className={`mx-auto flex-wrap fixed flex justify-between items-center text-white top-0 z-50  py-4 w-full ${showborder? 'border-none bg-blur backdrop-blur-md bg-opacity-50':'border-b border-gray-300 bg-slate-950'}`}>
        <span className="font-bold  mx-4 cursor-pointer">B3nson.Dev</span> 
       <div className="hidden lg:flex space-x-4 ml-auto mx-10 ">
-      <Link className="hover:text-blue-300 font-semibold hover:underline duration-300" to="/">Home</Link>
-      <Link className="hover:text-blue-300 font-semibold hover:underline duration-300" to="/about">About</Link>
-      <Link className="hover:text-blue-300 font-semibold hover:underline duration-300" to="/project">Projects</Link>
-      <Link className="hover:text-blue-300 font-semibold hover:underline duration-300" to="/contact">Contact</Link>
+      <a className="hover:text-blue-300 font-semibold hover:underline duration-300" href="#">Home</a>
+      <a className="hover:text-blue-300 font-semibold hover:underline duration-300" href="#About">About</a>
+      <a className="hover:text-blue-300 font-semibold hover:underline duration-300" href="#Project">Projects</a>
+      <a className="hover:text-blue-300 font-semibold hover:underline duration-300" href="#Contact">Contact</a>
       </div>
       <div className="lg:hidden mx-4 ml-auto">
         <button onClick={handleClick}>{isOpen?<img src={close}/> :<img src={menu}/>}</button>
       </div>
 
         {isOpen && 
-            <div className={`lg:hidden fixed z-20 right-0 flex flex-col top-10 space-y-2  text-center p-3 rounded-md ${showborder?'bg-slate-950':'bg-transparent'}`}>
-      <Link className="hover:text-blue-300 font-semibold " to="/">Home</Link>
-      <Link className="hover:text-blue-300 font-semibold" to="/about">About</Link>
-      <Link className="hover:text-blue-300 font-semibold" to="/project">Projects</Link>
-      <Link className="hover:text-blue-300 font-semibold" to="/contact">Contact</Link>
+            <div className={`lg:hidden absolute z-10 right-0 flex flex-col top-10 space-y-4  text-center p-4 rounded-md ${showborder?'bg-blur backdrop-blur-md bg-opacity-50':'bg-slate-950'}`}>
+      <a className="hover:text-blue-300 font-semibold " href="#">Home</a>
+      <a className="hover:text-blue-300 font-semibold" href="#About">About</a>
+      <a className="hover:text-blue-300 font-semibold" href="#Project">Projects</a>
+      <a className="hover:text-blue-300 font-semibold" href="#Contact">Contact</a>
       </div>
            
         }

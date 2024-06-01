@@ -4,7 +4,7 @@ import DP from "/src/images/Rectangle 1.png";
 const Home = () => {
   const [userName, setUserName] = useState("Ekwo");
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mb-20">
       <div className="flex space-y-8 flex-col lg:flex-row items-center justify-between">
         <div className="space-y-4 lg:mb-20 mb-5">
           <h3 className="text font-semibold">

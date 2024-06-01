@@ -1,13 +1,7 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./component/navbar";
+import HomePage from "./component/HomePage";
 function App() {
   return (
-    <main className="text-white font-poppins">
-      <Navbar />
-      <div className="mx-6 lg:mx-20  pt-14 min-h-100">
-        <Outlet />
-      </div>
-    </main>
+  <HomePage/>
   );
 }
 
